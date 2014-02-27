@@ -1,6 +1,7 @@
 Landr::Application.routes.draw do
   
 get "l/:short_name" => "sites#landing"
+get "l/:short_name" => "sites#signup"
 
 
   resources :sites
