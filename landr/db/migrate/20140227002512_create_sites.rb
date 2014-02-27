@@ -5,7 +5,7 @@ class CreateSites < ActiveRecord::Migration
       t.string :background_url
       t.text :message
       t.string :short_name
-      t.belongs_to :user
+      t.belongs_to :users
 
 
 
