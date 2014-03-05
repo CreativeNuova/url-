@@ -6,6 +6,7 @@ class SitesController < ApplicationController
   # GET /sites.json
   def index
     @sites = Site.all
+    @sites = current_user.sites
   end
 
   def landing
@@ -46,6 +47,7 @@ end
   # POST /sites.json
   def create
     @site = Site.new(site_params)
+    @site.user = curent_user
 
     respond_to do |format|
       if @site.save

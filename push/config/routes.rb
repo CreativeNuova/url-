@@ -1,18 +1,4 @@
-Landr::Application.routes.draw do
-  
-root "sites#index"
-
-
-get "l/:short_name" => "sites#landing"
-get "l/:short_name" => "sites#signup"
-
-
-  resources :sites
-
-  devise_for :users
-  
-
-
+Push::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

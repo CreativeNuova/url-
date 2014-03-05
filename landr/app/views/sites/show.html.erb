@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+
+
+
 <p>
   <strong>Site url:</strong>
   <%= @site.site_url %>
@@ -19,6 +22,23 @@
   <strong>Short name:</strong>
   <%= @site.short_name %>
 </p>
+
+<p>
+	<strong> Landing Page URL </strong>
+	<%= link_to (site_landing_url(@site.short_name)) %>
+</p>
+
+
+<p> 
+	<strong> Prospects </strong>
+	<ul>
+	<% @sites.prospects.each do |prospect| %>
+	<li> <% prospect.email %> </li>
+		<% end %>
+	</ul>
+</p>
+
+
 
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>
